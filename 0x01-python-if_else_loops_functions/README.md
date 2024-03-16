@@ -1,6 +1,6 @@
 ## Python If/else Loops and functions
 
-###Description
+###Description:
 
 The aim of this project is to understand:
 
