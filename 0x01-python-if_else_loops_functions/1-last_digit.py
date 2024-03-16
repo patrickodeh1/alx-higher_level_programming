@@ -18,4 +18,5 @@ if number < 0:
     print(f"Last digit of {number:d} is -{last_digit:d} and is \
 less than 6 and not 0")
 if number == 0:
+    last+digit == 0
     print(f"Last digit of {number:d} is {last_digit:d} and is 0")
