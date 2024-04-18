@@ -5,6 +5,7 @@ def length(words):
         count += 1
     return count
 
+
 def safe_print_list_integers(my_list=[], x=0):
     new = my_list[:x]
     val = []
@@ -13,9 +14,11 @@ def safe_print_list_integers(my_list=[], x=0):
             try:
                 print("{:d}".format(i), end='')
                 val.append(i)
-            except(TypeError, ValueError):
+            except (TypeError, ValueError):
                 pass
         else:
+            for i in new:
+                print("{:d}".format(i), end='')
             raise IndexError
     print()
     return length(val)
