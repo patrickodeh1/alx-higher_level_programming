@@ -8,7 +8,7 @@ def list_division(my_list_1, my_list_2, list_length):
         try:
             mul = new1[a] / new2[a]
         except ZeroDivisionError:
-            print("division by zero")
+            print("division by 0")
             mul = 0
         except TypeError:
             print("wrong type")
