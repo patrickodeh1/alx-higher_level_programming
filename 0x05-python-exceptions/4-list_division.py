@@ -18,5 +18,5 @@ def list_division(my_list_1, my_list_2, list_length):
             mul = 0
         finally:
             new_list.append(mul)
-    
+
     return new_list
