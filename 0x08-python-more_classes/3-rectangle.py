@@ -58,7 +58,8 @@ class Rectangle():
             for i in range(self.height):
                 for j in range(self.width):
                     rect += "#"
-                rect += "\n"
+                if i != self.height - 1:
+                    rect += "\n"
             return rect
 
     def __str__(self):
@@ -67,4 +68,4 @@ class Rectangle():
 
     def __repr__(self):
         """Return a string representation of the rectangle"""
-        return "Rectangle({}, {})".format(self.width, self.height)
+        return "<{}object at {}>".format(type(self).__name__, hex(id(self)))
