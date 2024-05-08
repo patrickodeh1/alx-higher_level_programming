@@ -48,3 +48,19 @@ class Rectangle():
             return 0
         else:
             return 2 * (self.width + self.height)
+
+    def print_rectangle(self):
+        """prints rectangle using #"""
+        if self.width == 0 or self.height == 0:
+            return ""
+        else:
+            rect = ""
+            for i in range(self.height):
+                for j in range(self.width):
+                    rect += "#"
+                rect += "\n"
+            return rect
+
+    def __str__(self):
+        """string representation of the rectangle"""
+        return self.print_rectangle()
