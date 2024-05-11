@@ -53,6 +53,7 @@ class SinglyLinkedList():
             current.next_node = new_node
     
     def __str__(self):
+        """str"""
         nodes = []
         current = self.head
         while current:
