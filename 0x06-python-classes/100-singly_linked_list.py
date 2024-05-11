@@ -1,4 +1,8 @@
+#!/usr/bin/python3
+
 """Defines a class node"""
+
+
 class Node():
     def __init__(self, data, next_node=None):
         """initializer"""
