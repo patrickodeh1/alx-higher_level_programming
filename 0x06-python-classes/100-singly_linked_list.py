@@ -5,6 +5,7 @@
 
 class Node():
     """singly linked list node"""
+
     def __init__(self, data, next_node=None):
         """initializer"""
         self.data = data
@@ -32,8 +33,11 @@ class Node():
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
+
 """defines a class SinglyLinkedList"""
+
 class SinglyLinkedList():
+    """linked list"""
     def __init__(self):
         """Initializes self"""
         self.head = None
