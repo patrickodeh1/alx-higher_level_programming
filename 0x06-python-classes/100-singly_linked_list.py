@@ -4,6 +4,7 @@
 
 
 class Node():
+    """singly linked list node"""
     def __init__(self, data, next_node=None):
         """initializer"""
         self.data = data
