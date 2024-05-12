@@ -57,7 +57,7 @@ class Square():
                 print(" " * self.position[0] + "#" * self.__size)
         else:
             print()
-        
+
     def __str__(self):
         """string representation of a square"""
         res = ""
@@ -68,4 +68,4 @@ class Square():
                 res += " " * self.position[0] + "#" * self.__size + "\n"
         else:
             res += "\n"
-        return res
+        return res[:1]
