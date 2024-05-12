@@ -59,9 +59,14 @@ class Rectangle():
         if self.width == 0 or self.height == 0:
             return ""
         else:
+            if self.print_symbol is None:
+                symbol = "#"
+            else:
+                symbol = str(self.print_symbol)
+            
             rect = ""
             for i in range(self.height):
-                rect += str(self.print_symbol) * self.width
+                rect += symbol * self.width
                 if i != self.height - 1:
                     rect += "\n"
             return rect
