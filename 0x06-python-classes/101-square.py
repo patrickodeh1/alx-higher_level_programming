@@ -60,12 +60,15 @@ class Square():
 
     def __str__(self):
         """string representation of a square"""
+        if self.__size == 0:
+            return ""
+
         res = ""
-        if self.__size != 0:
-            for _ in range(self.__position[1]):
-                res += "\n"
-            for _ in range(self.__size):
-                res += " " * self.position[0] + "#" * self.__size + "\n"
-        else:
+        for _ in range(self.__position[1]):
             res += "\n"
-        return res[:1]
+        for _ in range(self.__size):
+            res += " " * self.position[0]
+            res += "#" * self.__size
+            if _ != self.__size - 1:
+                res += "\n"
+        return res
