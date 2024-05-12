@@ -15,6 +15,7 @@ class Node():
     def data(self):
         """retrieves data"""
         return self.__data
+
     @data.setter
     def data(self, value):
         """sets the value for data"""
@@ -26,6 +27,7 @@ class Node():
     def next_node(self):
         """retrieves next node"""
         return self.__next_node
+
     @next_node.setter
     def next_node(self, value):
         """sets the value for the next node"""
@@ -35,6 +37,7 @@ class Node():
 
 
 """defines a class SinglyLinkedList"""
+
 
 class SinglyLinkedList():
     """linked list"""
@@ -52,16 +55,16 @@ class SinglyLinkedList():
             self.head = new_node
         else:
             current = self.head
-            while current.next_node and  current.next_node.data < value:
+            while current.next_node and current.next_node.data < value:
                 current = current.next_node
             new_node.next_node = current.next_node
             current.next_node = new_node
-    
+
     def __str__(self):
         """str"""
         nodes = []
         current = self.head
         while current:
             nodes.append(str(current.data))
-            current  = current.next_node
+            current = current.next_node
         return "\n".join(nodes)
