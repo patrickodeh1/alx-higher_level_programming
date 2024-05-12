@@ -1,0 +1,22 @@
+#!/usr/bin/python3
+import math
+
+"""class magicclass"""
+
+
+class MagicClass:
+    """defines magic class"""
+    def __init__(self, radius):
+        """initialize"""
+        self.__radius = 0
+        if type(radius) is not int and type(radius) is not float:
+            raise TypeError('radius must be a number')
+        self.__radius = radius
+
+    def area(self):
+        """defines the area"""
+        return 2 * math.pi * self.__radius ** 2
+
+    def circumference(self):
+        """a circumference"""
+        return 2 * math.pi * self.__radius
