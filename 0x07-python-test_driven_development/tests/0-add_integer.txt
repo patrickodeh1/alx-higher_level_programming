@@ -1,17 +1,15 @@
-from 0-add_integer import add_integer
 from doctest import testmod
 
 def add_integer(a, b=98):
-    '''
-    This function calculates the sum of two numbers
-    expected result:
+    """
+
     >>> add_integer(4, 7)
     11
     >>> add_integer(2)
     100
     >>> add_integer(0)
     98
-    '''
+    """
     return a + b
 
 if __name__ == '__main__':
