@@ -19,3 +19,6 @@ By the end of this project, you should be able to:
 - Perform data queries to retrieve specific information from databases
 - Insert, update, and delete data in a database
 - Understand and use basic SQL functions and operations
+
+### Author
+Patrick Odeh
