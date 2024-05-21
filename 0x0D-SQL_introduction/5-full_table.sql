@@ -1,6 +1,14 @@
 -- Prints full description
 -- full description of table first_table
-SELECT COLUMN_NAME AS 'Field', COLUMN_TYPE AS 'Type', IS_NULLABLE AS 'Null', COLUMN_KEY AS 'Key', COLUMN_DEFAULT AS 'Default', EXTRA AS 'Extra'
-FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_SCHEMA = 'hbtn_0c_0'
-AND TABLE_NAME = 'first_table';
+SELECT
+    COLUMN_NAME,
+    COLUMN_TYPE,
+    IS_NULLABLE,
+    COLUMN_KEY,
+    COLUMN_DEFAULT,
+    EXTRA
+FROM
+    INFORMATION_SCHEMA.COLUMNS
+WHERE
+    TABLE_NAME = 'first_table'
+    AND TABLE_SCHEMA = '${1}';
