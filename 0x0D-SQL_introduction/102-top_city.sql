@@ -1,9 +1,9 @@
 -- Import the temperatures table data
 -- Display the top 3 cities by average temperature during July and August
 
-SELECT city
+SELECT city, AVG(value) AS avg_temp
 FROM temperatures
-WHERE month IN ('July', 'August')
+WHERE MONTH(date) IN (7, 8)
 GROUP BY city
-ORDER BY temperatures DESC
+ORDER BY avg_temp DESC
 LIMIT 3;
