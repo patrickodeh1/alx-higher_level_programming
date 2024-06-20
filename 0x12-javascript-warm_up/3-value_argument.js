@@ -3,12 +3,9 @@ const process = require('process');
 
 const args = process.argv.slice(2);
 
-let hasArgs = false;
-
-for (const arg of args) {
-  console.log(arg);
-  hasArgs = true;
-}
-if (!hasArgs) {
+const firstArg = args[0];
+if (firstArg === undefined) {
   console.log('No argument');
+} else {
+  console.log(firstArg);
 }
