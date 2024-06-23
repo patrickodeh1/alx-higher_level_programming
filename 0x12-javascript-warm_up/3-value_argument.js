@@ -2,10 +2,10 @@
 const process = require('process');
 
 const args = process.argv.slice(2);
-if (args.length === 0) {
+
+const firstArg = args[0];
+if (firstArg === undefined) {
   console.log('No argument');
 } else {
-  args.foreach((arg) => {
-    console.log(`${args}`);
-  });
+  console.log(firstArg);
 }
