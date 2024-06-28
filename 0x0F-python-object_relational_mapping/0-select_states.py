@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-import sys
-import MySQLdb
 """
 This module connects to a MySQL database and 
 retrieves all rows from the `states`  
 """
+import sys
+import MySQLdb
 
 def list_states(username, password, db_name):
     db = MySQLdb.connect(
