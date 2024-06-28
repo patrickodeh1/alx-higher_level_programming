@@ -2,6 +2,8 @@
 import sys
 import MySQLdb
 
+-- Lists all states from database
+
 def list_states(username, password, db_name):
     db = MySQLdb.connect(
             host="localhost",
