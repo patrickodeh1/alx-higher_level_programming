@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/home/pvylei/venv/bin/python3
 import sys
 import MySQLdb
 
@@ -12,7 +12,7 @@ def list_states(username, password, db_name):
     )
 
     cursor = db.cursor()
-    cursor.execute("SELECT * FROME states ORDER BY id ASC")
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
     rows = cursor.fetchall()
     for row in rows:
         print(row)
