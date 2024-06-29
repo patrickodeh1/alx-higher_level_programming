@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 module that connects to database
 and lists all cities.
