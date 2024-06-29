@@ -8,7 +8,6 @@ It uses SQLAlchemy ORM to interact with the database.
 """
 
 
-
 def list_states():
     """
          Fetches all State records from the database and prints them.
