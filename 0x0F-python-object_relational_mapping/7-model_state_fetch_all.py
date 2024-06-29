@@ -4,7 +4,7 @@
 module that connects to database
 and lists all cities.
 """
-
+import SQLAlchemy
 from model_state import State, session
 
 
