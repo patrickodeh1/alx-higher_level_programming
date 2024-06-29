@@ -16,8 +16,8 @@ def list_states(username, password, db_name):
     )
 
     cursor = db.cursor()
-    query = "SELECT * FROM states WHERE name LIKE %s"
-    cursor.execute(query, (state_name + '%',))
+    query = "SELECT * FROM states WHERE name LIKE '{}%'".format(state_name)
+    cursor.execute(query)
     rows = cursor.fetchall()
     for row in rows:
         print(row)
