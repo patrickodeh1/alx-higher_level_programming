@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """
-This module connects to a MySQL database and 
-retrieves all rows from the `states`  
+This module connects to a MySQL database and
+retrieves all rows from the `states`
 """
 import sys
 import MySQLdb
+
 
 def list_states(username, password, db_name):
     db = MySQLdb.connect(
@@ -22,6 +23,7 @@ def list_states(username, password, db_name):
         print(row)
     cursor.close()
     db.close()
+
 
 if __name__ == "__main__":
     username = sys.argv[1]
