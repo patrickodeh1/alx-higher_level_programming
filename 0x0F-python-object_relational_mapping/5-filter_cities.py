@@ -25,7 +25,7 @@ def list_cities(username, password, db_name):
         ORDER BY cities.id ASC
     """
 
-    cursor.execute(query, (state_name))
+    cursor.execute(query, (state_name,))
     rows = cursor.fetchall()
     for row in rows:
         print(row)
