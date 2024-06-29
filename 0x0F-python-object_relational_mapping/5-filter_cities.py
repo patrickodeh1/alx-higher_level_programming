@@ -28,7 +28,7 @@ def list_cities(username, password, db_name):
     cursor.execute(query, (state_name,))
     rows = cursor.fetchall()
     city_names = [row[0] for row in rows]
-    print(",".join(city_names))
+    print(", ".join(city_names))
     cursor.close()
     db.close()
 
