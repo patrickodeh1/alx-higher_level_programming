@@ -1,7 +1,8 @@
 #!/usr/bin/python3
+
 """
-module that connects to database
-and lists all cities.
+This module connects to a MySQL database and lists all State objects.
+It uses SQLAlchemy ORM to interact with the database.
 """
 
 import SQLAlchemy
@@ -9,6 +10,9 @@ from model_state import State, session
 
 
 def list_states():
+    """
+         Fetches all State records from the database and prints them.
+    """
     states = session.query(state).all()
 
     for state in states:
