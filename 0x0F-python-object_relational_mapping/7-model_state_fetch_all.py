@@ -4,9 +4,9 @@
 module that connects to database
 and lists all cities.
 """
-import sys
-import MySQLdb
-from model_state import State, 
+
+from model_state import State, session
+
 
 def list_states():
     states = session.query(state).all()
