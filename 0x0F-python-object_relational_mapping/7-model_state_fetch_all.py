@@ -7,10 +7,10 @@ It uses SQLAlchemy ORM to interact with the database.
 import sys
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
-from model_state import State, Base
+from model_state import Base, State
 
 
-def list_states():
+def list_states(session):
     """
          Fetches all State records from the database and prints them.
     """
@@ -26,9 +26,12 @@ if __name__ == "__main__":
     db_name = sys.argv[3]
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
-        sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
+        username, password, db_name), pool_pre_ping=True)
 
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
+
+    list_states(session)
+
     session.close()
