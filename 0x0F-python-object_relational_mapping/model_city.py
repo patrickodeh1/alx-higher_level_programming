@@ -9,7 +9,9 @@ from model_state import Base
 
 Base = declarative_base()
 
+
 class City(Base):
+    """city class"""
     __tablename__ = 'cities'
 
     id = Column(Integer, primary_key=True, autoincrement=True)
