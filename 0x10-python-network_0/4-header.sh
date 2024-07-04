@@ -1,7 +1,3 @@
 #!/bin/bash
-
-url=$1
-
-response=$(curl -s -H "X-School-User-Id: 98" "$url")
-
-echo "$response"
+# Send a GET request with custom header
+curl -s -H "X-School-User-Id: 98" "$1"
