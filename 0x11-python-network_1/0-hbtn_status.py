@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""status"""
+
 import urllib.request
 
 if __name__ == "__main__":
