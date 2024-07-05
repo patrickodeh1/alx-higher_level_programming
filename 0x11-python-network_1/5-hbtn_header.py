@@ -10,4 +10,4 @@ if __name__ == "__main__":
     req = requests.get(url, auth=('user', 'pass'))
     if 'X-Request-ID' in req.headers:
         req_id = req.headers['X-Request-Id']
-    print(req_id)
+    print("{}".format(req_id))
