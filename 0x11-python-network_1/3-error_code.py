@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""error"""
+
 import sys
 import urllib.request
 import urllib.error

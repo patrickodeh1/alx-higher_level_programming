@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""email"""
+
 import sys
 import urllib.request
 import urllib.parse
