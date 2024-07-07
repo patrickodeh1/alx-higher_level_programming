@@ -1,0 +1,26 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("Hello. How are you? I am fine.")
+Hello.
+How are you?
+I am fine.
+>>> text_indentation("This is a test: Will it pass? Yes, it will.")
+This is a test:
+Will it pass?
+Yes, it will.
+>>> text_indentation("No special chars here")
+No special chars here
+>>> text_indentation(" Multiple spaces. After periods: And colons? And question marks? ")
+Multiple spaces.
+After periods:
+And colons?
+And question marks?
+>>> try:
+...     text_indentation(42)
+... except Exception as e:
+...     print(e)
+text must be a string
+>>> try:
+...     text_indentation(["Hello", "world"])
+... except Exception as e:
+...     print(e)
+text must be a string

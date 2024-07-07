@@ -1,17 +1,19 @@
-from add_integer import add_integer
-from doctest import testmod
-
-def add_integer(a, b=98):
-    """
-
-    >>> add_integer(4, 7)
-    11
-    >>> add_integer(2)
-    100
-    >>> add_integer(0)
-    98
-    """
-    return a + b
-
-if __name__ == '__main__':
-    testmod(name='0-add_integer', verbose = True)
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(1, 2)
+3
+>>> add_integer(100, -2)
+98
+>>> add_integer(2)
+100
+>>> add_integer(100.3, -2)
+98
+>>> try:
+...     add_integer(4, "School")
+... except Exception as e:
+...     print(e)
+b must be an integer
+>>> try:
+...     add_integer(None)
+... except Exception as e:
+...     print(e)
+a must be an integer
