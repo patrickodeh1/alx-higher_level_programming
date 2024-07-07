@@ -5,10 +5,18 @@
 def add_integer(a, b=98):
     """Adds two integers"""
 
-    if not isinstance(a, (int, float)):
+    if isinstance(a, float):
+        if a == float('inf') or a == float('-inf') or a != a:  # checks for inf and NaN
+            raise TypeError("a must be an integer")
+        a = int(a)
+    elif not isinstance(a, int):
         raise TypeError("a must be an integer")
-    if not isinstance(b, (int, float)):
+
+    if isinstance(b, float):
+        if b == float('inf') or b == float('-inf') or b != b:  # checks for inf and NaN
+            raise TypeError("b must be an integer")
+        b = int(b)
+    elif not isinstance(b, int):
         raise TypeError("b must be an integer")
-    a = int(a)
-    b = int(b)
+
     return a + b
